@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url("crows.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  font-size: 2rem;
+  color: rgb(123, 251, 255);
+}
+
+.btn-popup {
+  width: 100%;
+  height: 55px;
+  background: transparent;
+  border: 2px solid rgb(123, 251, 255);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: rgb(123, 251, 255);
+  font-weight: 500;
+}
+
+.btn-popup:hover {
+  background-color: rgb(123, 251, 255);
+  color: black;
+}
+
+.wrapper,
+.wrapper-reg {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+/* efter alla styling och med js */
+.wrapper.hidden,
+.wrapper-reg.hidden {
+  display: none;
+}
+
+.popup {
+  transform: scale(1);
+}
+
+.close {
+  color: rgb(123, 251, 255);
+  font-size: 2em;
+  align-self: end;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.form-box {
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: rgb(123, 251, 255);
+  text-align: center;
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid rgb(123, 251, 255);
+  margin: 30px 0;
+}
+
+ 
+.input-box label {
+  font-size: 1em;
+  color: rgb(123, 251, 255);
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: rgb(123, 251, 255);
+}
+
+
+.form-box a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-box a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background-color: #162938;
+  color: aliceblue;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: rgb(123, 251, 255);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0px;
+}

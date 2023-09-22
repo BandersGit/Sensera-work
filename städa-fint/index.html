@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/6ed2362df9.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Städafint AB</title>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- HEADER -->
+
+    <header>
+      <div class="logo-container"><a href="#"><img src="assets/logo.png" alt="Städafint logo" class="logo" /></a></div>
+      <nav>
+        <i class="fa-solid fa-bars menu-icon"></i>
+        <ul class="links">
+          <div class="dropdown">
+            <a href="" class="link">
+              <li class="service-link">Tjänster<i class="fa-solid fa-chevron-down"></i></li>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Basicstädning</a>
+              <a href="#">Toppstädning</a>
+              <a href="#">Diamantstädning</a>
+              <a href="#">Fönstertvätt</a>
+            </div>
+          </div>
+          <a href="" class="link">
+            <li>Om oss</li>
+          </a>
+          <a href="" class="link">
+            <li>Kontakt</li>
+          </a>
+        </ul>
+      </nav>
+      <div class="cta">
+        <a href="">Företag</a>
+        <a href="bokning.html">
+          <button>
+            <i class="fa-solid fa-user"></i>Mina sidor
+          </button>
+        </a>
+      </div>
+    </header>
+    <main>
+
+      <!-- HERO -->
+
+      <section id="hero">
+        <div class="hero__content-column">
+          <div class="hero__content">
+            <h1 class="hero__title">Vi städar fint<br> hemma hos dig</h1>
+            <p class="hero__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <form action="" class="hero__form">
+              <input type="text" name="postnr" id="postnr" placeholder="Postnummer" required />
+              <select name="service" id="service" required>
+                <option value="" selected disabled hidden>
+                  Välj tjänst
+                </option>
+                <option value="basic">Basic städning</option>
+                <option value="basic">Topp städning</option>
+                <option value="basic">Diamant städning</option>
+                <option value="basic">Fönstertvätt</option>
+              </select>
+              <a href=""><button class="hero__button">
+                  Gå vidare <i class="fa-solid fa-chevron-right icon"></i></button></a>
+            </form>
+          </div>
+        </div>
+        <div class="hero__image"></div>
+        <section id="hero__usps">
+          <div class="hero__usps">
+            <div class="hero__usp">
+              <i class="fa-solid fa-circle-check"></i>Prisgaranti
+            </div>
+            <div class="hero__usp">
+              <i class="fa-solid fa-circle-check"></i>Miljövänliga produkter
+            </div>
+            <div class="hero__usp">
+              <i class="fa-solid fa-circle-check"></i>Försäkrat
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- SERVICES -->
+
+      <section id="services">
+        <div class="services__header">
+          <h2>Våra tjänster</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+            eligendi cum voluptas quos rem, laudantium ea quibusdam.
+          </p>
+        </div>
+        <div class="services__grid">
+          <article class="service basic">
+
+            <img src="assets/livingroom.jpg" alt="Vardagsrum">
+            <h3>Basic</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="bold">Läs mer <i class="fa-solid fa-chevron-right icon"></i></p>
+          </article>
+          <article class="service topp">
+            <img src="assets/kitchen.jpg" alt="Kök">
+            <h3>Topp</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="bold">Läs mer <i class="fa-solid fa-chevron-right icon"></i></p>
+          </article>
+          <article class="service diamant">
+            <img src="assets/bathroom.jpg" alt="Bathroom">
+            <h3>Diamant</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="bold">Läs mer <i class="fa-solid fa-chevron-right icon"></i></p>
+          </article>
+          <article class="service window">
+            <img src="assets/window.jpg" alt="Fönstertvätt">
+            <h3>Fönstertvätt</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p class="bold">Läs mer <i class="fa-solid fa-chevron-right icon"></i></p>
+          </article>
+        </div>
+      </section>
+
+      <!-- USP -->
+
+      <section id="usps">
+        <div class="usp__image"></div>
+        <div class="usp__content-column">
+          <div class="usp__content">
+            <h2 class="usp__title">Varför välja oss?</h2>
+            <div class="usp">
+              <div class="usp__subtitle">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Vi erbjuder prisgaranti</h3>
+              </div>
+              <p class="usp__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="usp">
+              <div class="usp__subtitle">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Alla våra produkter miljövänliga</h3>
+              </div>
+              <p class="usp__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div class="usp">
+              <div class="usp__subtitle">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Vi är försäkrade</h3>
+              </div>
+              <p class="usp__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+      </section>
+
+      <!-- REVIEWS -->
+
+      <section id="reviews">
+        <h2>Vad säger våra kunder?</h2>
+        <div class="review__cards">
+          <article class="review__card">
+            <img src="assets/profile2.jpg" alt="Profilbild">
+            <p class="review__name">Jacob Jones</p>
+            <div class="review__rating">⭐⭐⭐⭐⭐</div>
+            <p class="review__quote">Städafint gorde ett fantastiskt jobb hemma hos oss. Rekommenderas starkt!</p>
+          </article>
+          <article class="review__card">
+            <img src="assets/profile1.jpg" alt="Profilbild">
+            <p class="review__name">Jenny Wilson</p>
+            <div class="review__rating">⭐⭐⭐⭐⭐</div>
+            <p class="review__quote">Städafint gorde ett fantastiskt jobb hemma hos oss. Rekommenderas starkt!</p>
+          </article>
+          <article class="review__card">
+            <img src="assets/profile3.jpg" alt="Profilbild">
+            <p class="review__name">Kristin Watson</p>
+            <div class="review__rating">⭐⭐⭐⭐⭐</div>
+            <p class="review__quote">Städafint gorde ett fantastiskt jobb hemma hos oss. Rekommenderas starkt!</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+
+      <section id="cta">
+        <h2>Boka städning redan idag!</h2>
+        <form action="" class="cta__form">
+          <input type="text" name="postnr" id="postnr" placeholder="Postnummer" required />
+          <select name="service" id="service" required>
+            <option value="" selected disabled hidden>
+              Välj tjänst
+            </option>
+            <option value="basic">Basic städning</option>
+            <option value="basic">Topp städning</option>
+            <option value="basic">Diamant städning</option>
+            <option value="basic">Fönstertvätt</option>
+          </select>
+          <a href="">
+            <button class="hero__button">
+              Gå vidare <i class="fa-solid fa-chevron-right icon"></i>
+            </button></a>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="dark">
+      <div class="footer__column1">
+        <div class="logo-container"><img src="assets/logo.png" alt="Städafint logo" class="logo"></div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, sequi magni laboriosam ad quaerat dolores
+          nobis dolorem labore.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__column2">
+        <h2 class="footer__title">Meny</h2>
+        <nav class="footer__nav">
+          <ul class="footer_links">
+            <a href="">
+              <li class="footer__link">Basicstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Toppstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Diamantstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Om oss</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Kontakt</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__column3">
+        <h2 class="footer__title">Meny</h2>
+        <nav class="footer__nav">
+          <ul class="footer_links">
+            <a href="">
+              <li class="footer__link">Basicstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Toppstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Diamantstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Om oss</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Kontakt</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__column4">
+        <h2 class="footer__title">Meny</h2>
+        <nav class="footer__nav">
+          <ul class="footer_links">
+            <a href="">
+              <li class="footer__link">Basicstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Toppstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Diamantstädning</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Om oss</li>
+            </a>
+            <a href="">
+              <li class="footer__link">Kontakt</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        Copyright © 2022 Städafint AB. Alla rättigheter reserverade.
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

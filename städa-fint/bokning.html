@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6ed2362df9.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Bokningar</title>
+</head>
+
+<body>
+
+    <body>
+        <section class="booking">
+            <div class="booking-section">
+                <h1 id="title"></h1>
+                <h2>Boka städning</h2>
+                <form id="booking-form">
+                    <div class="input-wrapper span-2">
+                        <label for="cleaner">Välj städare</label>
+                        <select name="cleaner" id="cleaner" required>
+                            <option value="" disabled selected hidden>Välj städare</option>
+                            <option value="Erik">Erik</option>
+                            <option value="Lisa">Lisa</option>
+                            <option value="Arfan">Arfan</option>
+                            <option value="Rany">Rany</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="date">Välj datum</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="time">Välj tid</label>
+                        <input type="time" name="time" id="time" required>
+                    </div>
+                    <div id="radio-btns">
+                        <div class="radio-wrapper">
+                            <input type="radio" value="Basic" name="level" id="basic" required>
+                            <label for="basic">Basic</label>
+                        </div>
+                        <div class="radio-wrapper">
+                            <input type="radio" value="Topp" name="level" id="topp">
+                            <label for="topp">Topp</label>
+                        </div>
+                        <div class="radio-wrapper">
+                            <input type="radio" value="Diamant" name="level" id="diamant">
+                            <label for="diamant">Diamant</label>
+                        </div>
+                        <div class="radio-wrapper">
+                            <input type="radio" value="Fönster" name="level" id="window">
+                            <label for="window">Fönstertvätt</label>
+                        </div>
+                    </div>
+                    <div class="span-2"><button type="submit" id="submit">Boka nu</button></div>
+                </form>
+            </div>
+            <div class="booking-section">
+                <h2>Kommande bokningar</h2>
+                <ul id="bookings-list"></ul>
+            </div>
+            <div class="booking-section">
+                <h2>Utförda städningar</h2>
+                <ul id="completed-list"></ul>
+                <button id="delete-completed">Radera</button>
+            </div>
+            </div>
+            <a href="index.html"><i class="fa-solid fa-chevron-left"></i> Tillbaka</a>
+        </section>
+    </body>
+</body>
+
+</html>

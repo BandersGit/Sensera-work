@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "date": "2022-05-23",
+    "time": "13:00",
+    "customer": "Gabriella",
+    "level": "Basic",
+    "cleaner": "Erik",
+    "status": false
+  },
+  {
+    "id": 2,
+    "date": "2022-04-23",
+    "time": "14:30",
+    "customer": "Gabriella",
+    "level": "Diamant",
+    "cleaner": "Erik",
+    "status": true
+  },
+  {
+    "id": 3,
+    "date": "2022-11-24",
+    "time": "12:22",
+    "customer": "Gabriella",
+    "level": "Diamanat",
+    "cleaner": "Lisa",
+    "status": false
+  },
+  {
+    "id": 4,
+    "date": "2022-02-23",
+    "time": "16:00",
+    "customer": "Gabriella",
+    "level": "Fönster",
+    "cleaner": "Lisa",
+    "status": true
+  },
+
+  {
+    "id": 5,
+    "date": "2022-04-25",
+    "time": "13:00",
+    "customer": "Gabriella",
+    "level": "Fönster",
+    "cleaner": "Arfan",
+    "status": false
+  },
+  {
+    "id": 6,
+    "date": "2022-01-23",
+    "time": "14:00",
+    "customer": "Gabriella",
+    "level": "Basic",
+    "cleaner": "Arfan",
+    "status": true
+  },
+  {
+    "id": 7,
+    "date": "2022-03-23",
+    "time": "15:00",
+    "customer": "Gabriella",
+    "level": "Topp",
+    "cleaner": "Rany",
+    "status": false
+  },
+  {
+    "id": 8,
+    "date": "2022-12-23",
+    "time": "16:00",
+    "customer": "kund8 namn",
+    "level": "Topp",
+    "cleaner": "Rany",
+    "status": true
+  }
+]

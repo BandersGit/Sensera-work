@@ -1,0 +1,176 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+height: 100vh;
+  background: url("mountain.png");
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+body > h1 {
+padding: 60px 0 0 100px;
+font-size: 3rem;
+text-transform:uppercase;
+font-weight: 800;
+color: #031d31;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.spelplan {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.652);
+  width: 400px;
+  height: 400px;
+}
+
+.ruta {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  background-color: #031d31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.ruta.x,
+.ruta.circle {
+  cursor: not-allowed;
+}
+
+.ruta.x::before,
+.ruta.x::after {
+  background-color: white;
+}
+
+.spelplan.x .ruta:not(.x):not(.circle):hover::before,
+.spelplan.x .ruta:not(.x):not(.circle):hover::after {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ruta.x::before,
+.ruta.x::after,
+.spelplan.x .ruta:not(.x):not(.circle):hover::before,
+.spelplan.x .ruta:not(.x):not(.circle):hover::after {
+  content: "";
+  position: absolute;
+  width: calc((100px * 0.9) * 0.1);
+  /*width: 100px;*/
+  height: calc(100px * 0.9);
+  /*height: 100px;*/
+}
+
+.ruta.x::before,
+.spelplan.x .ruta:not(.x):not(.circle):hover::before {
+  transform: rotate(-45deg);
+}
+
+.ruta.x::after,
+.spelplan.x .ruta:not(.x):not(.circle):hover::after {
+  transform: rotate(45deg);
+}
+
+.ruta.circle::before {
+  background-color: #2c4143;
+}
+
+.spelplan.circle .ruta:not(.x):not(.circle):hover::before {
+  background-color: rgba(44, 65, 67, 0.5);
+}
+
+.ruta.circle::before,
+.ruta.circle::after,
+.spelplan.circle .ruta:not(.x):not(.circle):hover::before,
+.spelplan.circle .ruta:not(.x):not(.circle):hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ruta.circle::before,
+.spelplan.circle .ruta:not(.x):not(.circle):hover::before {
+  height: calc(100px * 0.9);
+  width: calc(100px * 0.9);
+}
+
+.ruta.circle::after,
+.spelplan.circle .ruta:not(.x):not(.circle):hover::after {
+  height: calc((100px * 0.9) * 0.8);
+  width: calc((100px * 0.9) * 0.8);
+  background-color: #8bdcb7;
+}
+
+.vinnare {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: #2c4143;
+  display: none;
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+}
+
+#restart {
+  background-color: #8bdcb7;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#restart:hover {
+  background-color: #7018c5;
+}
+
+.vinnare.visa {
+  display: flex;
+}
+
+.ruta:first-child,
+.ruta:nth-child(2),
+.ruta:nth-child(3) {
+  border-top: none;
+}
+
+.ruta:first-child,
+.ruta:nth-child(4),
+.ruta:nth-child(7) {
+  border-left: none;
+}
+
+.ruta:nth-child(3),
+.ruta:nth-child(6),
+.ruta:last-child {
+  border-right: none;
+}
+
+.ruta:nth-child(7),
+.ruta:nth-child(8),
+.ruta:last-child {
+  border-bottom: none;
+}

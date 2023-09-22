@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Crows</title>
+  </head>
+  <body>
+    <div class="content">
+      <p>Enter the crows</p>
+      <button class="btn-popup">NEST</button>
+    </div>
+    <div class="wrapper">
+      <span class="close"> x </span>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form>
+          <div class="input-box">
+            <label for="email">Email</label>
+
+            <input type="email" name="email" reqired />
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+
+            <input type="password" name="password" reqired />
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>
+              Don't have an accout?
+              <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrapper-reg hidden">
+      <span class="close"> x </span>
+      <div class="form-box register">
+        <h2>Register</h2>
+        <form action="#">
+          <div class="input-box">
+            <label for="">Email</label>
+            <input type="email" reqired />
+          </div>
+          <div class="input-box">
+            <label for="">Password</label>
+            <input type="password" reqired />
+          </div>
+          <button type="submit" class="btn" id="regBtn">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
