@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LatteLux</title>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<header>
-    <h1>LatteLux - din vardags lyx</h1>
-</header>
-<div class="container">
-    <h2>Vårt latte sortiment:</h2>
-    
-    <div class="coffee-item" data-price="44">
-        <span class="coffee-name">Rödbetslatte</span><span>44 kr</span>
-        <div class="quantity-buttons">
-            <button class="add-button">+</button>
-            <span class="quantity">0</span>
-            <button class="subtract-button">-</button>
-        </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="body-container">
+      <header>
+        <img class="bg" src="lux.png" />
+        <span class="lux">LUX</span>
+        <h1>Din<span class="nr1">vardags</span>lux</h1>
+      </header>
+      <main>
+        <section class="order-container">
+          <h2>Vårt latte sortiment:</h2>
+          <div class="coffee-item" data-price="44">
+            <span class="coffee-name">Rödbetslatte</span><span>44 kr</span>
+            <div class="quantity-buttons">
+              <button class="add-button">+</button>
+              <span class="quantity">0</span>
+              <button class="subtract-button">-</button>
+            </div>
+          </div>
+          <div class="coffee-item" data-price="56">
+            <span class="coffee-name">Maca chai latte</span><span>56 kr</span>
+            <div class="quantity-buttons">
+              <button class="add-button">+</button>
+              <span class="quantity">0</span>
+              <button class="subtract-button">-</button>
+            </div>
+          </div>
+          <div class="total-section">
+            <h2>Att betala</h2>
+            <p>total summa: <span id="total-amount">0</span> kr</p>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="coffee-item" data-price="56">
-        <span class="coffee-name">Maca chai latte</span><span>56 kr</span>
-        <div class="quantity-buttons">
-            <button class="add-button">+</button>
-            <span class="quantity">0</span>
-            <button class="subtract-button">-</button>
-        </div>
-    </div>
-    <div class="total-section">
-        <h2>Att betala</h2>
-        <p>total summa: <span id="total-amount">0</span> kr</p>
-    </div>
-</div>
-
-</body>
+  </body>
 </html>
