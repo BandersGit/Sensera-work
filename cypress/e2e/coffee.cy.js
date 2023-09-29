@@ -30,7 +30,31 @@ describe('Coffee tests', () => {
     cy.get('section.order-container h2').should('exist')
   })
 
-  it('Should have at least one div in order-container', () => {
-    cy.get('section.order-container div').should('exist')
+  it('Should have at least two divs with class coffee-item in order-container', () => {
+    cy.get('section.order-container div.coffee-item').should('have.length.at.least', 2)
+  })
+
+  it('Should have a data price attribute inside coffee item div', () => {
+    cy.get('div.coffee-item[data-price]').should('exist')
+  })
+
+  it('Should have buttons inside coffee item div', () => {
+    cy.get('div.coffee-item').first().find('button').its('length').should('eq', 2)
+  })
+
+  it('Should have a script element inside head element with "defer" attribute', () => {
+    cy.get('head script[defer]').should('exist')
+    
+  })
+
+  //Todo: fyll eventuellt på med resterande tester av struktur och attribut
+
+  //Todo: test not working, not finished
+  it('Should display total cost of added items', () => {
+    cy.get('div.coffee-item').then($coffeeItems => {
+      $coffeeItems.forEach(item => {
+        //cy.find('add-button').click()
+      })
+    })
   })
 })
