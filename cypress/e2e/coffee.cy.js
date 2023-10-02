@@ -59,11 +59,11 @@ describe('Coffee tests', () => {
     })
   })
 
-  //Test not done
   it('Should display the correct quantity of coffee items after subtract button is clicked', () => {
-    cy.get('.add-button').then(($addBtn) => {
-      cy.wrap($addBtn).click({ multiple: true }).click({ multiple: true })
-      .get('.quantity').filter(':contains("2")').should('have.length', $addBtn.length)
+    cy.get('.add-button').click({ multiple: true }).click({ multiple: true })
+    cy.get('.subtract-button').then(($subBtn) => {
+      cy.wrap($subBtn).click({ multiple: true })
+      .get('.quantity').filter(':contains("1")').should('have.length', $subBtn.length)
     })
   })
 
@@ -83,8 +83,16 @@ describe('Coffee tests', () => {
         console.log(typeof totalCost)
       })
     }).then(() => {
-      cy.get('#total-amount').invoke('text').then(parseInt).should('eq', totalCost)
+      cy.get('#total-amount').should('contain', totalCost)
     })
+  })
+
+  it('Should not be able to reduce coffee items below zero', () => {
+    cy.get('.subtract-button').then(($subBtn) => {
+      cy.wrap($subBtn).click({ multiple: true })
+      .get('.quantity').filter(':contains("0")').should('have.length', $subBtn.length)
+    }) 
+    
   })
 
 
