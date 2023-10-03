@@ -47,29 +47,34 @@ describe('Coffee tests', () => {
 
   })
 
-  //Todo: fyll eventuellt på med resterande tester av struktur och attribut
-
-
-
+  it('Should have a starting quantity with value zero', () => {
+    cy.get('.coffee-item').each(($item) => {
+        cy.wrap($item).find('.quantity').should('have.text', 0)
+    })
+  })
 
   it('Should display the correct quantity of added coffee items', () => {
-    cy.get('.add-button').then(($addBtn) => {
-      cy.wrap($addBtn).click({ multiple: true }).click({ multiple: true })
-      .get('.quantity').filter(':contains("2")').should('have.length', $addBtn.length)
+    cy.get('.coffee-item').each(($item) => {
+      cy.wrap($item).find('.quantity').as('quantity').invoke('text').then((quantValue) => {
+        cy.wrap($item).find('.add-button').click().click()
+        cy.get('@quantity').should('have.text', parseInt(quantValue) + 2)
+      })
     })
   })
 
   it('Should display the correct quantity of coffee items after subtract button is clicked', () => {
-    cy.get('.add-button').click({ multiple: true }).click({ multiple: true })
-    cy.get('.subtract-button').then(($subBtn) => {
-      cy.wrap($subBtn).click({ multiple: true })
-      .get('.quantity').filter(':contains("1")').should('have.length', $subBtn.length)
+    cy.get('.coffee-item').each(($item) => {
+      cy.wrap($item).find('.quantity').as('quantity').invoke('text').then((quantValue) => {
+        cy.wrap($item).find('.add-button').click().click()
+        cy.wrap($item).find('.subtract-button').click()
+        cy.get('@quantity').should('have.text', parseInt(quantValue) + 1)
+      })
     })
   })
 
   it('Should display total cost of added and reduced coffee items', () => {
 
-    let totalCost = 0
+    let totalCost = 0;
     cy.get('.coffee-item').each(($item) => {
 
       cy.wrap($item).find('.add-button').click().click()
@@ -88,11 +93,10 @@ describe('Coffee tests', () => {
   })
 
   it('Should not be able to reduce coffee items below zero', () => {
-    cy.get('.subtract-button').then(($subBtn) => {
-      cy.wrap($subBtn).click({ multiple: true })
-      .get('.quantity').filter(':contains("0")').should('have.length', $subBtn.length)
-    }) 
-    
+    cy.get('.coffee-item').each(($item) => {
+        cy.wrap($item).find('.subtract-button').click().click()
+        cy.wrap($item).find('.quantity').should('have.text', 0)
+    })
   })
 
 
