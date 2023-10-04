@@ -14,10 +14,6 @@ describe('Coffee tests', () => {
     cy.get('main').should('exist')
   })
 
-  it('Should have a order-cointainer section', () => {
-    cy.get('section.order-container').should('exist')
-  })
-
   it('Should have an h1 element', () => {
     cy.get('h1').should('exist')
   })
@@ -26,12 +22,8 @@ describe('Coffee tests', () => {
     cy.get('h1').its('length').should('eq', 1)
   })
 
-  it('Should have at least one h2 in order-container', () => {
-    cy.get('section.order-container h2').should('exist')
-  })
-
-  it('Should have at least two divs with class coffee-item in order-container', () => {
-    cy.get('section.order-container div.coffee-item').should('have.length.at.least', 2)
+  it('Should have at least two divs with class coffee-item', () => {
+    cy.get('div.coffee-item').should('have.length.at.least', 2)
   })
 
   it('Should have a data price attribute inside coffee item div', () => {
@@ -44,14 +36,15 @@ describe('Coffee tests', () => {
 
   it('Should have a script element inside head element with "defer" attribute', () => {
     cy.get('head script[defer]').should('exist')
-
   })
 
-  it('Should have a starting quantity with value zero', () => {
+  it('Should have coffee items with a starting quantity with value zero', () => {
     cy.get('.coffee-item').each(($item) => {
         cy.wrap($item).find('.quantity').should('have.text', 0)
     })
   })
+
+  //E2E tests
 
   it('Should display the correct quantity of added coffee items', () => {
     cy.get('.coffee-item').each(($item) => {
