@@ -1,6 +1,7 @@
 /// <reference types="cypress"/>
 
 beforeEach(() => {
+  //Change visit URL when releasing to students ("http://localhost:5500/index.html") 
   cy.visit("http://localhost:5500/coffee/coffee.html");
 });
 
@@ -49,6 +50,9 @@ describe("Coffee tests", () => {
   });
 
   //add test for checking total amount existing
+  it("Should have display total amount in total-section div", () => {
+    cy.get('.total-section').find('#total-amount').should('exist')
+  })
 
   //E2E tests
 
